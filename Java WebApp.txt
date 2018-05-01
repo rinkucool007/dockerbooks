@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/30252532/correct-way-to-deploy-war-files-in-docker-image
+https://runnable.com/docker/java/dockerize-your-java-application
+https://pipelines.puppet.com/docs/tutorials/build-and-deploy-tomcat-war-docker/
+http://codeomitted.com/deploy-war-file-to-docker-image/
+
+
+https://github.com/omerio/graphviz-webapp.git
