@@ -11,4 +11,7 @@ Docker in Window with Linux :
 https://docs.docker.com/docker-for-windows/#daemon
 https://forums.docker.com/t/linux-container-on-windows-server-2016/26715
 https://forums.docker.com/t/linux-container-in-w2k16/26321/9
+
 https://www.youtube.com/watch?v=pI5X5TsTcNs
+https://www.youtube.com/watch?v=r5C5fxYRg2I
+https://www.youtube.com/watch?v=Fru27PQbQz0
