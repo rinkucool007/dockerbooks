@@ -17,3 +17,5 @@ https://www.youtube.com/watch?v=r5C5fxYRg2I
 https://www.youtube.com/watch?v=Fru27PQbQz0
 
 http://www.deploycontainers.com/2017/10/31/run-linux-containers-windows-server-2016-version-1709/
+https://www.vembu.com/blog/linux-containers-on-windows-server-2016-using-linuxkit/
+https://serverfault.com/questions/895290/how-do-you-run-a-linux-docker-container-on-windows-server-2016
