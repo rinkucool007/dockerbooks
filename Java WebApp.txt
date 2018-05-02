@@ -15,3 +15,5 @@ https://forums.docker.com/t/linux-container-in-w2k16/26321/9
 https://www.youtube.com/watch?v=pI5X5TsTcNs
 https://www.youtube.com/watch?v=r5C5fxYRg2I
 https://www.youtube.com/watch?v=Fru27PQbQz0
+
+http://www.deploycontainers.com/2017/10/31/run-linux-containers-windows-server-2016-version-1709/
