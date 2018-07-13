@@ -48,3 +48,49 @@ docker container stop registry && docker container rm -v registry
 
 
 192.168.182.131:5000/my-ubuntu
+
+------------------------------------------------
+docker pull registry
+docker run --rm -it -p 5000:5000 registry:2
+localhost:5000/v2/_catalog
+docker pull mongo
+docker tag mongo localhost:5000/mongo
+docker push localhost:5000/mongo
+
+in other machine :
+curl IP:5000/v2/_catalog
+docker image pull IP:5000/mongo
+docker image ls | sls mongo
+
+to tag another image in the registry:
+docker pull nginx
+docker image tag nginx localhost:5000/nginx
+docker push localhost:5000/nginx
+
+
+localhost:5000/v2/mongo/tag/list
+
+Web view of registery:
+192.168.1.75
+
+docker run -d --name registry-ui -e ENV_DOCKER_REGISTRY=192.168.1.75 -e ENV_DOCKER_REGISTRY_PORT=5000 -p 8095:80 konradkleine/docker-registry-frontend:v2
+
+
+
+---------------------------------
+docker run –-name localreg -p 5000:5000 -d registry
+docker exec -it localreg sh
+
+
+
+{“insecure-registries”:[“privaterepo:5000”]}
+
+
+192.168.182.131 privaterepo
+
+docker pull 192.168.182.131:5000/jenkins
+
+
+docker tag jenkins privaterepo:5000/jenkins
+
+docker push privaterepo:5000/jenkins
