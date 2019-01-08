@@ -47,7 +47,7 @@ docker container stop registry && docker container rm -v registry
 
 
 
-192.168.182.131:5000/my-ubuntu
+192.168.xxx.xxx:5000/my-ubuntu
 
 ------------------------------------------------
 docker pull registry
@@ -71,9 +71,9 @@ docker push localhost:5000/nginx
 localhost:5000/v2/mongo/tag/list
 
 Web view of registery:
-192.168.1.75
+192.168.x.xx
 
-docker run -d --name registry-ui -e ENV_DOCKER_REGISTRY=192.168.1.75 -e ENV_DOCKER_REGISTRY_PORT=5000 -p 8095:80 konradkleine/docker-registry-frontend:v2
+docker run -d --name registry-ui -e ENV_DOCKER_REGISTRY=192.xxx.1.75 -e ENV_DOCKER_REGISTRY_PORT=5000 -p 8095:80 konradkleine/docker-registry-frontend:v2
 
 
 
@@ -88,7 +88,7 @@ docker exec -it localreg sh
 
 192.168.182.131 privaterepo
 
-docker pull 192.168.182.131:5000/jenkins
+docker pull 192.xxx.xxx.131:5000/jenkins
 
 
 docker tag jenkins privaterepo:5000/jenkins
