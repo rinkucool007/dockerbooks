@@ -1,0 +1,59 @@
+Install Docker on Win server 2016 - offline
+*************************************************
+
+Step 1 #
+---------------
+invoke-webrequest -UseBasicparsing -Outfile docker-17.06.2-ee-7.zip https://download.docker.com/components/engine/windows-server/17.06/docker-17.06.2-ee-7.zip
+
+Step 2#
+---------------
+Expand-Archive docker-17.06.2-ee-7.zip -DestinationPath $Env:ProgramFiles
+
+Step 3#
+---------------
+Remove-Item -Force docker-17.06.2-ee-7.zip
+
+Step 4#
+---------------
+$null = Install-WindowsFeature containers
+
+Step 5#
+---------------
+shutdown -r
+
+Step 6#
+---------------
+$newPath = "$env:ProgramFiles\docker;" +
+[Environment]::GetEnvironmentVariable("PATH",
+[EnvironmentVariableTarget]::Machine)
+
+
+Step 7#
+---------------
+[Environment]::SetEnvironmentVariable("PATH", $newPath,
+[EnvironmentVariableTarget]::Machine)
+
+
+Step 8#
+---------------
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+
+
+Step 9#
+---------------
+dockerd --register-service
+
+
+Step 10#
+---------------
+Start-Service docker
+
+
+Step 11#
+---------------
+get-service docker
+
+
+Step 12#
+---------------
+docker container run hello-world:nanoserver
