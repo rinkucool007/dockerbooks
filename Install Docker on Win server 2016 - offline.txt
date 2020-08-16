@@ -57,3 +57,18 @@ get-service docker
 Step 12#
 ---------------
 docker container run hello-world:nanoserver
+
+
+--------------------------------------------
+
+
+Install-WindowsFeature -Name Containers -Restart
+New-Item -Type Directory -Path 'C:\Program Files\Docker' -Force
+#Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+Invoke-WebRequest -Uri https://aka.ms/tp5/b/docker -OutFile $env:ProgramFilesDockerdocker.exe -UseBasicParsing
+[Environment]::SetEnvironmentVariable(“Path”, $env:Path + “;C:\Program Files\Docker”, [EnvironmentVariableTarget]::Machine)
+dockerd –register-service
+Start-Service Docker
+Install-PackageProvider ContainerImage -force
+docker login
+docker pull mcr.microsoft.com/mssql/server
