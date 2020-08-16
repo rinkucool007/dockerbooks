@@ -61,6 +61,9 @@ docker container run hello-world:nanoserver
 
 --------------------------------------------
 
+bcdedit /set HypervisorLaunchType auto
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+Enable-WindowsOptionalFeature -Online -FeatureName Containers -All
 
 Install-WindowsFeature -Name Containers -Restart
 New-Item -Type Directory -Path 'C:\Program Files\Docker' -Force
